@@ -33,7 +33,7 @@ process rvtest {
 
 
 	"""
-	/projects/b1059/projects/Katie/20180813_burden/rvtests/executable/rvtest --pheno $ped --out $ped --inVcf ${params.vcf} --freqUpper ${params.freqUpper} --freqLower ${params.freqLower} --geneFile ${params.refflat}  --vt price --kernel skat
+	${workflow.projectDir}/rvtests/executable/rvtest --pheno $ped --out $ped --inVcf ${params.vcf} --freqUpper ${params.freqUpper} --freqLower ${params.freqLower} --geneFile ${params.refflat}  --vt price --kernel skat
 
 	"""
 }
