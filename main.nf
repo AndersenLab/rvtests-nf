@@ -18,7 +18,7 @@ process makeped {
 
 
 	"""
-	Rscript --vanilla "${workflow.projectDir}/makeped.R" $infile
+	Rscript --vanilla "${workflow.projectDir}/makeped.R" "${infile}"
 
 	"""
 }
