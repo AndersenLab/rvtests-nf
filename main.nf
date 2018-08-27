@@ -10,12 +10,15 @@ params.freqLower = 0.003
 
 // Make the phenotype .ped file required for rvtests
 process makeped {
+	input:
+		file 'infile' from Channel.fromPath(params.in)
+
 	output:
 		file("*.ped") into ped_files
 
 
 	"""
-	Rscript --vanilla "${workflow.projectDir}/makeped.R" ${params.in}
+	Rscript --vanilla "${workflow.projectDir}/makeped.R" $infile
 
 	"""
 }
